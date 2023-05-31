@@ -1,0 +1,136 @@
+$brand-color: #574AE8;
+
+$dark-10: #1A202C;
+$dark-20: #717171;
+$dark-30: #F3F5F7;
+$dark-40: #FFFFFF;
+
+$suport-01: #2962FF;
+$suport-02: #0BB07B;
+$suport-03: #FFCE52;
+$suport-04: #F03D3D;
+$suport-05: #E0E0E0;
+
+$blue: #3EA1DB;
+$blue-dark: #574AE8;
+$white: #FFF;
+
+$title: #313131;
+$text: #B6B6B6;
+
+$linear-gradient: linear-gradient(90deg, #574AE8 0%, #3EA1DB 100%);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $dark-30;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+header {
+    background: $linear-gradient;
+    padding: 41px 0;
+
+    .header__title {
+        display: flex;
+        justify-content: space-between;
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            line-height: 30px;
+            color: $white;
+        }
+    }
+
+    .search__bar {
+        position: relative;
+        margin-top: 73px;
+
+        input {
+            width: 100%;
+            background-color: rgba(255, 255, 255, .20);
+            color: $white;
+            border: none;
+            border-radius: 6px;
+            padding: 21px 21px 21px 64px;
+
+
+            &::placeholder {
+                font-size: 1.125rem;
+                line-height: 1.35rem;
+                color: rgba(255, 255, 255, .50);
+            }
+
+            &:focus-visible  {
+                outline: none;
+            }
+
+            &::-webkit-search-cancel-button{
+                -webkit-appearance: none;
+            }
+        }
+
+        img {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+main {
+    section {
+        margin-top: 100px;
+        .content {
+            margin: 50px auto;
+
+            .blog__content {
+                border-radius: 6px;
+                background-color: $white;
+                box-shadow: 0 0 10px rgba(19, 19, 31, 0.05);
+                padding: 25px;
+
+                .info__blog {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .date__blog {
+                        font-size: 1rem;
+                        font-weight: 400;
+                        line-height: 1.25rem;
+                        color: $dark-20;
+                    }
+                }
+
+                h2 {
+                    font-size: 26px;
+                    font-weight: 400;
+                    line-height: 2rem;
+                    color: $dark-10;
+                    margin-top: 1.375rem;
+                }
+
+                p {
+                    font-size: 1.125rem;
+                    font-weight: 400;
+                    line-height: 2rem;
+                    color: $dark-20;
+                    margin-top: 8px;
+                }
+            }
+        }
+    }
+}
